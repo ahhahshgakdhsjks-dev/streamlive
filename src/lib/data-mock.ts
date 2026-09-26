@@ -1,7 +1,7 @@
 /** @format */
 import { Match, SportId } from "./types";
 
-const DEMO = "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8";
+const DEMO = "https://gumlet.tv/watch/6ab6a222862b783f466d1653/";
 
 const MOCK_MATCHES: Match[] = [
   { id: "soc-1", sport: "soccer", league: "Premier League", homeTeam: "Man City", awayTeam: "Arsenal", homeLogo: "https://api.dicebear.com/7.x/shapes/svg?seed=mancity", awayLogo: "https://api.dicebear.com/7.x/shapes/svg?seed=arsenal", status: "live", time: "LIVE 67'", score: "2 - 1", isLive: true, streamUrl: DEMO, viewers: "124K" },

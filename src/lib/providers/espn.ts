@@ -13,7 +13,6 @@ function fmtClock(detail: string, shortDetail: string, statusType: string) {
   return shortDetail || detail || "";
 }
 
-// --- SOCCER MULTI-LEAGUE ---
 const SOCCER_LEAGUES = [
   { id: "eng.1", label: "Premier League", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard" },
   { id: "esp.1", label: "La Liga", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard" },
@@ -58,12 +57,10 @@ function mapEventToMatch(ev: any, sport: SportId, leagueLabel: string): Match {
     homeLogo: home?.team?.logo ?? `https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${home?.team?.id}.png&w=100&h=100`,
     awayLogo: away?.team?.logo ?? `https://a.espncdn.com/combiner/i?img=%2Fi%2Fteamlogos%2Fsoccer%2F500%2F${away?.team?.id}.png&w=100&h=100`,
     status: st,
-    time: time || (st === "scheduled" ? new Date(ev.date).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" }) : ""),
+    time: time || (st === "scheduled" ? new Date(ev.date).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZone: "America/New_York" }) : ""),
     score: isLive || st === "finished" ? `${homeScore} - ${awayScore}` : undefined,
     isLive,
-    // DEMO MODE: every match gets a playable HLS so the player is never empty
-    // Replace this URL with your real .m3u8 provider when ready
-    streamUrl: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    streamUrl: "https://gumlet.tv/watch/6ab6a222862b783f466d1653/",
     viewers: `${(Math.random() * 80 + 10).toFixed(0)}K`,
   };
 }
@@ -87,7 +84,6 @@ async function fetchSoccerAll(): Promise<Match[]> {
 
 export async function fetchEspn(sport: SportId): Promise<Match[]> {
   if (sport === "soccer") return fetchSoccerAll();
-
   const cfg = LEAGUE_MAP[sport];
   if (!cfg?.url) return [];
   try {
@@ -102,7 +98,6 @@ export async function fetchEspn(sport: SportId): Promise<Match[]> {
   }
 }
 
-// For soccer, allow league filter via ?league=eng.1|esp.1|ita.1|uefa.champions etc
 export async function fetchSoccerByLeague(leagueId: string): Promise<Match[]> {
   const lg = SOCCER_LEAGUES.find((l) => l.id === leagueId);
   if (!lg) return fetchSoccerAll();

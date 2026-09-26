@@ -12,7 +12,8 @@
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 999px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
 
-body { background: var(--bg); }
+html { overflow-x: hidden; }
+body { background: var(--bg); overflow-x: hidden; }
 
 /* live pulse */
 @keyframes pulse-live {
@@ -20,3 +21,7 @@ body { background: var(--bg); }
   50% { opacity: 0.5; }
 }
 .animate-pulse-live { animation: pulse-live 1.5s ease-in-out infinite; }
+
+/* hide scrollbar but keep scroll */
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
