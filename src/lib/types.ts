@@ -23,7 +23,15 @@ export type SportId =
   | "boxing"
   | "ufc"
   | "motogp"
-  | "f1";
+  | "f1"
+  | "ncaaf"
+  | "tennis"
+  | "golf"
+  | "afl"
+  | "nascar"
+  | "rugby"
+  | "volleyball"
+  | "cricket";
 
 export interface Sport {
   id: SportId;
@@ -42,4 +50,12 @@ export const SPORTS: Sport[] = [
   { id: "ufc", label: "UFC/MMA", icon: "🥋", color: "#dc2626", count: 0 },
   { id: "motogp", label: "MotoGP", icon: "🏁", color: "#06b6d4", count: 0 },
   { id: "f1", label: "F1", icon: "🏎️", color: "#f43f5e", count: 0 },
+  { id: "ncaaf", label: "NCAAF", icon: "🎓", color: "#7c3aed", count: 0 },
+  { id: "tennis", label: "TENNIS", icon: "🎾", color: "#84cc16", count: 0 },
+  { id: "golf", label: "GOLF", icon: "⛳", color: "#16a34a", count: 0 },
+  { id: "afl", label: "AFL", icon: "🦘", color: "#ea580c", count: 0 },
+  { id: "nascar", label: "NASCAR", icon: "🏎️", color: "#e11d48", count: 0 },
+  { id: "rugby", label: "RUGBY", icon: "🏉", color: "#0ea5e9", count: 0 },
+  { id: "volleyball", label: "VOLLEY", icon: "🏐", color: "#06b6d4", count: 0 },
+  { id: "cricket", label: "CRICKET", icon: "🏏", color: "#ca8a04", count: 0 },
 ];

@@ -13,6 +13,14 @@ const SPORT_META: Record<SportId, { color: string; label: string; emoji: string 
   ufc: { color: "#dc2626", label: "UFC", emoji: "🥋" },
   motogp: { color: "#06b6d4", label: "MotoGP", emoji: "🏁" },
   f1: { color: "#f43f5e", label: "F1", emoji: "🏎️" },
+  ncaaf: { color: "#7c3aed", label: "NCAAF", emoji: "🎓" },
+  tennis: { color: "#84cc16", label: "TENNIS", emoji: "🎾" },
+  golf: { color: "#16a34a", label: "GOLF", emoji: "⛳" },
+  afl: { color: "#ea580c", label: "AFL", emoji: "🦘" },
+  nascar: { color: "#e11d48", label: "NASCAR", emoji: "🏎️" },
+  rugby: { color: "#0ea5e9", label: "RUGBY", emoji: "🏉" },
+  volleyball: { color: "#06b6d4", label: "VOLLEY", emoji: "🏐" },
+  cricket: { color: "#ca8a04", label: "CRICKET", emoji: "🏏" },
 };
 
 function MatchCard({ m }: { m: Match }) {

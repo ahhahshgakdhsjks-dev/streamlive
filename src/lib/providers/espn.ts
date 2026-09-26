@@ -41,6 +41,14 @@ const LEAGUE_MAP: Record<SportId, { url: string; label: string }> = {
   ufc: { url: "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard", label: "UFC" },
   motogp: { url: "", label: "MotoGP" },
   f1: { url: "", label: "F1" },
+  ncaaf: { url: "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard", label: "NCAAF" },
+  tennis: { url: "https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard", label: "ATP Tennis" },
+  golf: { url: "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard", label: "PGA Golf" },
+  afl: { url: "https://site.api.espn.com/apis/site/v2/sports/australian/afl/scoreboard", label: "AFL" },
+  nascar: { url: "https://site.api.espn.com/apis/site/v2/sports/racing/nascar/scoreboard", label: "NASCAR" },
+  rugby: { url: "https://site.api.espn.com/apis/site/v2/sports/rugby/rugby-union/scoreboard", label: "Rugby" },
+  volleyball: { url: "https://site.api.espn.com/apis/site/v2/sports/volleyball/scoreboard", label: "Volleyball" },
+  cricket: { url: "https://site.api.espn.com/apis/site/v2/sports/cricket/scoreboard", label: "Cricket" },
 };
 
 function mapEventToMatch(ev: any, sport: SportId, leagueLabel: string): Match {
@@ -123,6 +131,20 @@ export async function fetchSoccerByLeague(leagueId: string): Promise<Match[]> {
 export { SOCCER_LEAGUES };
 
 export async function fetchAllEspn(): Promise<Match[]> {
-  const [soccer, ...rest] = await Promise.all([fetchSoccerAll(), fetchEspn("nfl"), fetchEspn("nba"), fetchEspn("mlb"), fetchEspn("ufc")]);
+  const [soccer, ...rest] = await Promise.all([
+    fetchSoccerAll(),
+    fetchEspn("nfl"),
+    fetchEspn("nba"),
+    fetchEspn("mlb"),
+    fetchEspn("ufc"),
+    fetchEspn("ncaaf"),
+    fetchEspn("tennis"),
+    fetchEspn("golf"),
+    fetchEspn("afl"),
+    fetchEspn("nascar"),
+    fetchEspn("rugby"),
+    fetchEspn("volleyball"),
+    fetchEspn("cricket"),
+  ]);
   return [soccer, ...rest].flat();
 }
