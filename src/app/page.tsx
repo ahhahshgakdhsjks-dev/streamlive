@@ -81,6 +81,14 @@ export default function Home() {
     { id: "fra.1", label: "Ligue 1" },
     { id: "uefa.champions", label: "Champions League" },
     { id: "uefa.europa", label: "Europa League" },
+    { id: "fifa.worldq", label: "WC Qualification" },
+    { id: "fifa.world", label: "World Cup" },
+    { id: "fifa.friendly", label: "Friendlies" },
+    { id: "uefa.nations", label: "Nations League" },
+    { id: "uefa.euro", label: "EURO" },
+    { id: "conmebol.america", label: "Copa América" },
+    { id: "caf.nations", label: "Africa Cup" },
+    { id: "afc.asian", label: "Asian Cup" },
   ];
 
   useEffect(() => {

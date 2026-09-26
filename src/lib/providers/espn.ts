@@ -21,6 +21,15 @@ const SOCCER_LEAGUES = [
   { id: "fra.1", label: "Ligue 1", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard" },
   { id: "uefa.champions", label: "Champions League", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard" },
   { id: "uefa.europa", label: "Europa League", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.europa/scoreboard" },
+  // --- Negara / International (jadwal ESPN) ---
+  { id: "fifa.worldq", label: "WC Qualification", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.worldq/scoreboard" },
+  { id: "fifa.world", label: "World Cup", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard" },
+  { id: "fifa.friendly", label: "Friendlies", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.friendly/scoreboard" },
+  { id: "uefa.nations", label: "Nations League", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.nations/scoreboard" },
+  { id: "uefa.euro", label: "EURO", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.euro/scoreboard" },
+  { id: "conmebol.america", label: "Copa América", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/conmebol.america/scoreboard" },
+  { id: "caf.nations", label: "Africa Cup", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/caf.nations/scoreboard" },
+  { id: "afc.asian", label: "Asian Cup", url: "https://site.api.espn.com/apis/site/v2/sports/soccer/afc.asian/scoreboard" },
 ] as const;
 
 const LEAGUE_MAP: Record<SportId, { url: string; label: string }> = {
