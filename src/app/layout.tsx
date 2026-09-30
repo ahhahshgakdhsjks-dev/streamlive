@@ -14,6 +14,7 @@ export const viewport = {
 };
 
 import Script from "next/script";
+import AdsterraPopunder from "@/components/Popunder";
 
 export default function RootLayout({
   children,
@@ -24,6 +25,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="bg-[#0a0a0a] text-zinc-100 antialiased">
         {children}
+        {/* Adsterra Popunder - 10 menit sekali per user */}
+        <AdsterraPopunder />
         <Script
           src="https://annoyingnightmareedit.com/ac/53/d3/ac53d3b27063b75f80678ff245e47f42.js"
           strategy="afterInteractive"
