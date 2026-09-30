@@ -3,6 +3,7 @@ import { fetchAllEspn, fetchEspn } from "@/lib/providers/espn";
 import VideoPlayer from "@/components/VideoPlayer";
 import BannerAd from "@/components/BannerAd";
 import Banner728 from "@/components/Banner728";
+import Ad320x50Top from "@/components/Ad320x50Top";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SportId } from "@/lib/types";
@@ -40,7 +41,8 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
 
       <div className="max-w-[1400px] mx-auto p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-4 sm:gap-6">
         <div className="min-w-0 overflow-hidden">
-          <BannerAd />
+          {/* IKLAN 320x50 DI KOTAK MERAH - ATAS PLAYER */}
+          <Ad320x50Top />
           {match.streamUrl ? <VideoPlayer src={match.streamUrl} /> : (
             <div className="aspect-video bg-zinc-900 rounded-xl border border-zinc-800 flex flex-col items-center justify-center gap-3 p-4 sm:p-6 text-center">
               <div className="text-3xl sm:text-4xl">⏳</div>
