@@ -1,7 +1,6 @@
 import { getMatchById } from "@/lib/data";
 import { fetchAllEspn, fetchEspn } from "@/lib/providers/espn";
 import VideoPlayer from "@/components/VideoPlayer";
-import BannerAd from "@/components/BannerAd";
 import Banner728 from "@/components/Banner728";
 import Ad320x50Top from "@/components/Ad320x50Top";
 import Link from "next/link";
@@ -75,7 +74,6 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
             ))}
           </div>
           <Banner728 />
-          <BannerAd />
         </div>
         <aside className="space-y-4 min-w-0">
           <div className="bg-[#141416] border border-zinc-800 rounded-xl p-3 sm:p-4">
