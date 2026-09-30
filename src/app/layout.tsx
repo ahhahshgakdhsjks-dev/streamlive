@@ -83,7 +83,7 @@ function getCookie(name) {
 if (!getCookie('adsterra_pop_timeout')) {
     
     // PANGGIL KODE IKLAN POPUNDER ADSTERRA ANDA DI SINI
-    // (Masukkan kode <script> dari Adsterra tanpa mengubah isi skrip aslinya)
+    <script src="https://annoyingnightmareedit.com/61/7c/89/617c8981b212e3b6000690e798261dc6.js"></script>
     
     // Set cookie selama 120 detik (2 menit) agar iklan tidak muncul lagi
     setCookie('adsterra_pop_timeout', 'activated', 120);
