@@ -1,5 +1,6 @@
 /** @format */
 import { Match, SportId } from "@/lib/types";
+import { sportVideo } from "@/lib/sport-videos";
 
 function mapEspnStatus(s: string): Match["status"] {
   if (s === "STATUS_IN_PROGRESS") return "live";
@@ -77,7 +78,7 @@ function mapEventToMatch(ev: any, sport: SportId, leagueLabel: string): Match {
     time: time || (st === "scheduled" ? new Date(ev.date).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", timeZone: "America/New_York" }) : ""),
     score: isLive || st === "finished" ? `${homeScore} - ${awayScore}` : undefined,
     isLive,
-    streamUrl: "https://gumlet.tv/watch/6ab6a222862b783f466d1653/",
+    streamUrl: sportVideo(sport),
     viewers: `${(Math.random() * 80 + 10).toFixed(0)}K`,
   };
 }
