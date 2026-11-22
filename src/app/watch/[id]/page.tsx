@@ -70,7 +70,7 @@ export default async function WatchPage({ params }: { params: Promise<{ id: stri
           </div>
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
             {[1, 2, 3, 4].map((n) => (
-              <a key={n} href="https://prorstream.com/c?a=81&o=2" target="_blank" rel="noopener noreferrer" className={`py-2.5 rounded-xl text-xs font-bold border text-center block ${n === 1 && match.streamUrl ? "bg-red-600 border-red-600 text-white" : "bg-zinc-900 border-zinc-800 text-zinc-400 hover:bg-zinc-800"}`}>CHANNEL {n} {n === 1 && match.streamUrl ? " (HD)" : ""}</a>
+              <a key={n} href="https://annoyingnightmareedit.com/cswut11y71?key=162f8551e184bdbdf06bfcc57c7bbecf" target="_blank" rel="noopener noreferrer" className={`py-2.5 rounded-xl text-xs font-bold border text-center block ${n === 1 && match.streamUrl ? "bg-red-600 border-red-600 text-white" : "bg-zinc-900 border-zinc-800 text-zinc-400 hover:bg-zinc-800"}`}>CHANNEL {n} {n === 1 && match.streamUrl ? " (HD)" : ""}</a>
             ))}
           </div>
           <Banner728 />
